@@ -101,7 +101,7 @@ print_result:
     li a7, 10
     ecall
     
-#обработка "исключения" при попытке деления на 0
+#обработка попытки деления на 0
 division_zero:
     la a0, zerodiv   
     li a7, 4
