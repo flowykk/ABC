@@ -16,8 +16,8 @@ n:	.word	0
 array:  .space  40
 .text
 in:
-        la 	a0, prompt
-        li 	a7, 4
+        la 	a0 prompt
+        li 	a7 4
         ecall
         li      a7 5
         ecall
@@ -32,8 +32,8 @@ in:
      
 # Заполнение массива      
 fill:
-	la 	a0, prompt2 
-	li 	a7, 4
+	la 	a0 prompt2 
+	li 	a7 4
         ecall
         li      a7 5
         ecall
@@ -89,13 +89,14 @@ sum:
         
         add	t1 t5 a0 
         
-        bgtz	t1, sum_if_gz
+        bgtz	t1 sum_if_gz
         
-        bltu 	t1 t2, overflow_fail
+        bleu 	t1 t2 overflow_fail
         j sum_next
         
 sum_if_gz:
-	bgtu 	t1 t4, overflow_fail 
+	bleu 	t4 t1 overflow_fail 
+	bleu 	t1 t2 overflow_fail
         
 sum_next:
 	add	t5 t5 a0
