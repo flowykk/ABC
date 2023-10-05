@@ -12,11 +12,14 @@ loop:
     	mv      a0, a1
         jal     fact
         
-        li      t0, 1000
-        bgeu    a0, t0, end
-    	
-        li      a7, 1
+	li      a7, 1
         ecall
+        
+        li      t0, 2147483647
+        addi 	a2, a1, 1
+        div	a3, t0, a2
+	
+        blt 	a3, a0, end
         
         li      a7, 4
         la      a0, ln
@@ -27,6 +30,10 @@ loop:
 
 end:
 	li      a7, 4
+        la      a0, ln
+        ecall
+        
+	li      a7, 4
         la      a0, sep
         ecall
         
@@ -34,7 +41,7 @@ end:
         la      a0, prompt
         ecall
         
-	addi	a0, a1, -1
+	mv	a0, a1
 	li      a7, 1
         ecall
         
@@ -42,7 +49,7 @@ end:
         la      a0, prompt1
         ecall
         
-        addi	a0, a1, -1
+        mv	a0, a1
         jal     fact
 	li      a7, 1
         ecall
