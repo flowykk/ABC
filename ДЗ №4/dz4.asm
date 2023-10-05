@@ -57,19 +57,19 @@ end:
         li      a7, 10
         ecall
 
-fact:   addi    sp sp -8
-        sw      ra 4(sp)
-        sw      s1 (sp)
+fact:   addi    sp, sp, -8
+        sw      ra, 4(sp)
+        sw      s1, (sp)
 
-        mv      s1 a0
-        addi    a0 s1 -1
-        li      t0 1
-        ble     a0 t0 done
+        mv      s1, a0
+        addi    a0, s1 -1
+        li      t0, 1
+        ble     a0, t0, done
         jal     fact
-        mul     s1 s1 a0
+        mul     s1, s1, a0
 
-done:   mv      a0 s1
-        lw      s1 (sp)
-        lw      ra 4(sp)
-        addi    sp sp 8
+done:   mv      a0, s1
+        lw      s1, (sp)
+        lw      ra, 4(sp)
+        addi    sp, sp 8
         ret
