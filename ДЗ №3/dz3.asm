@@ -16,8 +16,8 @@ n:	.word	0
 array:  .space  40
 .text
 in:
-        la 	a0 prompt
-        li 	a7 4
+        la 	a0, prompt
+        li 	a7, 4
         ecall
         li      a7 5
         ecall
@@ -32,8 +32,8 @@ in:
      
 # Заполнение массива      
 fill:
-	la 	a0 prompt2 
-	li 	a7 4
+	la 	a0, prompt2 
+	li 	a7, 4
         ecall
         li      a7 5
         ecall
@@ -52,7 +52,8 @@ fill:
         lw	t3 n	
         la      t0 array
         li 	t4 2147483647 # Сохранение максимально допустимого 32-битного числа
-        li 	t2 -2147483647 # Сохранение минимального допустимого 32-битного числа
+        li 	t2 -2147483647 # Сохранение максимально допустимого 32-битного числа
+        	
         
         la 	a0 prompt3   
 	li 	a7 4           
@@ -73,8 +74,6 @@ out_array:
         
         lw	t3 n	
         la      t0 array
-        mv 	t5 zero
-        mv 	t1 zero
         
         la      a0 ln
    	li      a7 4
@@ -86,21 +85,22 @@ out_array:
 # Подсчёт суммы с учётом возможного переполнения
 sum:	
 	lw      a0 (t0) 
-        
-        add	t1 t5 a0 
-        
-        bgtz	t1 sum_if_gz
-        
-        bleu 	t1 t2 overflow_fail
-        j sum_next
-        
-sum_if_gz:
-	bleu 	t4 t1 overflow_fail 
-	bleu 	t1 t2 overflow_fail
-        
+	
+	bltz	a0 check_less_zero_overflow
+	
+	sub 	a3 t4 a0
+	ble 	a3 t1 overflow_fail
+	j 	sum_next
+	
+check_less_zero_overflow:
+	sub 	a3 t2 a0
+	bge 	a3 t1 overflow_fail
+
 sum_next:
-	add	t5 t5 a0
-        addi	t6 t6 1   
+        add	t1 t5 a0 
+        add	t5 t5 a0
+        addi	t6 t6 1 
+        
         addi    t0 t0 4
         addi    t3 t3 -1      
         
