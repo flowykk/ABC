@@ -1,4 +1,4 @@
-.include "riscv2.asm"
+.include "macros.asm"
 
 .text
 
