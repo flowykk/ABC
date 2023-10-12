@@ -108,6 +108,7 @@ out_copy_array:
 	
 .end_macro
 
+# Макрос для замены всех нулевых элементов, стоящих до первого отрицательного, единицами
 .macro EditElems(%copy_array_address, %n, %flag)
 loop:
         lw      a0 (%copy_array_address)
