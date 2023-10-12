@@ -15,6 +15,9 @@ array:  .space  40
 copy_array:  .space  40
 
 # Макрос для ввода и проверки длины массивов
+# array_address - адрес на первый элемент массива А
+# copy_array_address - адрес на первый элемент массива Б (копии массива А)
+# n - будущее количество элементов в массивах
 .macro InputArrayLength(%array_address, %copy_array_address, %n)
 input: 
     	PrintPrompt(prompt)
@@ -37,7 +40,10 @@ input_next:
         la      %copy_array_address copy_array    
 .end_macro
 
-# Макрос для ввода элементов массива А и их копирования в массив B 
+# Макрос для ввода элементов массива А и их копирования в массив B
+# array_address - адрес на первый элемент массива А
+# copy_array_address - адрес на первый элемент массива Б (копии массива А)
+# n - количество элементов в массивах
 .macro FillArray(%array_address, %copy_array_address, %n)
 fill:
     	PrintPrompt(prompt2)
@@ -62,6 +68,9 @@ fill:
 .end_macro
 
 # Макрос для вывода элементов двух массивов
+# array_address - адрес на первый элемент массива А
+# copy_array_address - адрес на первый элемент массива Б (копии массива А)
+# n - будущее количество элементов в массивах
 .macro PrintArray(%array_address, %copy_array_address, %n)
 
 	PrintPrompt(prompt3)
@@ -109,6 +118,9 @@ out_copy_array:
 .end_macro
 
 # Макрос для замены всех нулевых элементов, стоящих до первого отрицательного, единицами
+# copy_array_address - адрес на первый элемент массива Б (копии массива А)
+# n - будущее количество элементов в массивах
+# flag - регистр, который хранит вспомогательный флаг
 .macro EditElems(%copy_array_address, %n, %flag)
 loop:
         lw      a0 (%copy_array_address)
@@ -140,6 +152,7 @@ loop_next:
 .end_macro
 
 # Макрос для вывода строк и подсказок
+# x - регистр со строкой, которую нужно вывести в консоль
 .macro PrintPrompt(%x)
 	la 	a0 %x    
 	li 	a7 4           
@@ -147,6 +160,7 @@ loop_next:
 .end_macro
 
 # Макрос для вывода целых чисел
+# x - регистр с числом, которое нужно вывести в консоль
 .macro PrintNumber(%x)
 	li      a7 1
         mv      a0 %x       
@@ -154,6 +168,7 @@ loop_next:
 .end_macro
 
 # Макрос для ввода целых чисел
+# x - регистр, куда нужно записать число, которое введёт пользователь
 .macro InputNumber(%x)
 	li      a7 5
         ecall
