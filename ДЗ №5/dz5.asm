@@ -2,7 +2,7 @@
 
 .text
 
-in:
+main:
         InputArrayLength(t3, t0) # Ввод и проверка длины массива
         
 	FillArray(t0, t3) # Заполнение массива 
