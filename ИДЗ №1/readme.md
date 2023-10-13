@@ -1,7 +1,7 @@
 # Домашнее задание №5
 ## Код программы
 ### Файл [test.py](test.py)
-```
+```python
 import subprocess
 import os
 
