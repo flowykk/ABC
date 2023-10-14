@@ -56,7 +56,6 @@ if __name__ == "__main__":
 
 ### Лог тестового покрытия
 ```
-/usr/local/bin/python3.8 /Users/danila/Desktop/test_idz1.py
 Тест №1
 Входные данные от пользователя:
 -21
