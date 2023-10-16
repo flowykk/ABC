@@ -3,16 +3,16 @@ import os
 
 def run_asm_file(file_path, input_data):
     extra_spaces = 66
-    try:
-        for input in input_data:
-            result = subprocess.run(["java", "-jar", "rars.jar", file_path], input=input, text=True, capture_output=True)
-            print("Входные данные от пользователя:\n" + input)
-            print(result.stdout[extra_spaces:])
-    except subprocess.CalledProcessError as e:
-        print("Произошла ошибка:", e)
+    test_number = 1
+    for input in input_data:
+        result = subprocess.run(["java", "-jar", "rars.jar", file_path], input=input, text=True, capture_output=True)
+        print("Тест №" + str(test_number))
+        test_number += 1
+        print("Входные данные от пользователя:\n" + input)
+        print(result.stdout[extra_spaces:])
 
 def main():
-    asm_file_path = "idz1.asm"
+    asm_file_path = "main.asm"
 
     test_data = [
         "-21\n",
