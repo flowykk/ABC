@@ -9,59 +9,29 @@
 
 ### Оценка 4-5:
 - Приведено решение задачи на ассемблере. Ввод длины исходного массива, а также его заполнение осуществляется пользователем с клавиатуры. Вывод данных осуществляет в консоль.
-- Присутсвуют комментарии, поясняющие выполняемые действия, задачи макросов и подпрограмм.
+- Присутсвуют комментарии, поясняющие выполняемые действия.
 - В отчёте ниже приведены [Лог программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%961/readme.md#%D0%BB%D0%BE%D0%B3-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B), результаты работы [Тестовой программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%961/readme.md#%D0%BB%D0%BE%D0%B3-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F) и [Скриншоты](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%961/readme.md#%D1%80%D0%B0%D1%81%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D0%BC-%D0%BD%D0%B0-%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D0%B0%D1%85-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D0%B8-%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D1%87%D1%82%D0%BE%D0%B1%D1%8B-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B).
-  
-- Присутсвуют комментари, описывающие входные данные в макросах и подпрограммах.
+
+### Оценка 6-7:
+- В программе присутствут подпрограммы с передачей аргументов через параметры.
+- Присутсвуют комментарии, описывающие входные данные в макросах и подпрограммах.
+
+### Оценка 8:
 - Макросы и подпрограммы поддерживают многократное использование и корректно выыполняется с разными входными данными.
 - Разработана тестирующая программа на Python, которая способна прогонять написанную на ассемблере программу с различными входными данными.
-- Присутствуют макросы, отвечающие за ввод и вывод данных.
-- ??? Программа разбита на несколько единиц компиляции, а подпрограммы составляют унифицированные модули.
-- Макросы выделены в отдельную библиотеку, которая подключается в главном файле
+
+### Оценка 9:
+- Присутствуют макросы, отвечающие за ввод и вывод данных, причем они поддерживают многократное использование с разными входнными данными.
+
+### Оценка 10:
+- Макросы выделены в отдельную библиотеку, которая подключается в главном файле.
   
 ## Код программы
-### Файл [test.py](test.py)
-```python
-import subprocess
-import os
+### [Главный файл программы](idz1.asm)
+### [Файл с библиотекой макросов](macros.asm)
+### [Файл с тестовой программой](test.py)
 
-def run_asm_file(file_path, input_data):
-    extra_spaces = 66
-    test_number = 1
-    for input in input_data:
-        result = subprocess.run(["java", "-jar", "rars.jar", file_path], input=input, text=True, capture_output=True)
-        print("Тест №" + str(test_number))
-        test_number += 1
-        print("Входные данные от пользователя:\n" + input)
-        print(result.stdout[extra_spaces:])
-
-def main():
-    asm_file_path = "idz1.asm"
-
-    test_data = [
-        "-21\n",
-        "0\n",
-        "65\n",
-        "11\n",
-        "3\n0\n-1\n0\n",
-        "4\n1\n0\n-1\n0\n",
-        "5\n0\n14\n0\n-6\n0\n",
-        "6\n3\n0\n0\n-4\n0\n-1\n",
-        "7\n0\n3\n1\n0\n-9\n0\n0\n",
-        "9\n4\n0\n5\n0\n0\n2\n-3\n3\n0\n",
-        "10\n0\n2\n7\n0\n3\n0\n-4\n0\n-1\n0\n",
-    ]
-
-    if not os.path.exists("rars.jar"):
-        print("Ошибка: Файл rars.jar не найден в текущем каталоге.")
-        return
-
-    run_asm_file(asm_file_path, test_data)
-
-if __name__ == "__main__":
-    main()
-```
-
+## Логи выполнения программ
 ### Лог тестового покрытия
 ```
 Тест №1
@@ -229,221 +199,6 @@ if __name__ == "__main__":
 Массив А: 0 2 7 0 3 0 -4 0 -1 0 
 Массив B: 1 2 7 1 3 1 -4 0 -1 0 
 --------
-```
-
-### Файл [idz1.asm](idz1.asm)
-```assembly
-.include "macros.asm"
-
-.text
-
-main:
-        InputArrayLength(t0, t1, t3) # Ввод и проверка длины массивов
-        
-	FillArray(t0, t1, t3) # Заполнение массива А и массива Б
-	
-	# Вывод массивов до каких-либо изменений
-	PrintPrompt(prompt5)
-	PrintPrompt(ln)
- 	PrintArray(t0, t1, t3)
- 	
- 	# Имзенение всех нулевых элементов, стоящих до первого отрицательного, на единицу 
- 	li 	t5 1 # Вспомогательный флаг для отслеживания первого отрицательного элемента
- 	EditElems(t1, t3, t5)
- 	
- 	# Вывод массивов после того, как были изменены элементы
- 	PrintPrompt(prompt6)
-	PrintPrompt(ln)
- 	PrintArray(t0, t1, t3)
- 	
- 	# Выход из программы
- 	Exit()
-```
-
-### Файл [macros.asm](macros.asm)
-```assembly
-.data
-sep:    .asciz  "--------\n"
-prompt: .asciz  "Введите число элементов массива: "
-prompt2: .asciz  "Введите текущий элемент массива: "  
-prompt3: .asciz  "Массив А: "
-prompt4: .asciz  "Массив B: "
-prompt5: .asciz  "Массивы до изменения: "
-prompt6: .asciz  "Массивы после изменения: "
-error:  .asciz  "Массив может быть длинной только от 1 до 10!! \n" 
-ln:     .asciz "\n"
-
-.align  2                  
-n:	.word	0
-array:  .space  40
-copy_array:  .space  40
-
-# Макрос для ввода и проверки длины массивов
-# array_address - адрес на первый элемент массива А
-# copy_array_address - адрес на первый элемент массива Б (копии массива А)
-# n - будущее количество элементов в массивах
-.macro InputArrayLength(%array_address, %copy_array_address, %n)
-input: 
-    	PrintPrompt(prompt)
-        InputNumber(%n)
-        
-        ble     %n zero fail
-        li      t4 10
-        bgt     %n t4 fail
-        j 	input_next
-        
-fail:
-        PrintPrompt(error)
-        Exit()
-
-input_next:
-        la	t4 n
-        sw	%n (t4)
-        la      %array_address array   
-        
-        la      %copy_array_address copy_array    
-.end_macro
-
-# Макрос для ввода элементов массива А и их копирования в массив B
-# array_address - адрес на первый элемент массива А
-# copy_array_address - адрес на первый элемент массива Б (копии массива А)
-# n - количество элементов в массивах
-.macro FillArray(%array_address, %copy_array_address, %n)
-fill:
-    	PrintPrompt(prompt2)
-        InputNumber(t2)   
-        
-        sw      t2 (%array_address) 
-        sw      t2 (%copy_array_address) 
-        
-        addi    %array_address %array_address 4
-        addi    %copy_array_address %copy_array_address 4
-        addi    %n %n -1
-        
-        bnez    %n fill 
-        
-        PrintPrompt(sep)
-        
-        lw	%n n	
-        la      %array_address array
-        
-        la      %copy_array_address copy_array
-        
-.end_macro
-
-# Макрос для вывода элементов двух массивов
-# array_address - адрес на первый элемент массива А
-# copy_array_address - адрес на первый элемент массива Б (копии массива А)
-# n - будущее количество элементов в массивах
-.macro PrintArray(%array_address, %copy_array_address, %n)
-
-	PrintPrompt(prompt3)
-	
-out_array:
-	li      a7 1
-        lw      a0 (%array_address)
-        ecall
-        
-        li      a0 ' '
-        li      a7 11
-        ecall
-        
-        addi    %array_address %array_address 4
-        addi    %n %n -1
-
-        bnez    %n out_array
-        
-        lw	%n n
-        
-        PrintPrompt(ln)
-        PrintPrompt(prompt4)
-        
-out_copy_array:
-	li      a7 1
-        lw      a0 (%copy_array_address)
-        ecall
-        
-        li      a0 ' '
-        li      a7 11
-        ecall
-        
-        addi    %copy_array_address %copy_array_address 4
-        addi    %n %n -1
-
-        bnez    %n out_copy_array
-        
-        lw	%n n
-        la      %copy_array_address copy_array
-        la      %array_address array
-        
-        PrintPrompt(ln)
-        PrintPrompt(sep)
-	
-.end_macro
-
-# Макрос для замены всех нулевых элементов, стоящих до первого отрицательного, единицами
-# copy_array_address - адрес на первый элемент массива Б (копии массива А)
-# n - будущее количество элементов в массивах
-# flag - регистр, который хранит вспомогательный флаг
-.macro EditElems(%copy_array_address, %n, %flag)
-loop:
-        lw      a0 (%copy_array_address)
-	
-	li 	t4 0
-	blt 	a0 t4 edit_flag
-	beq	a0 t4 edit
-	j 	loop_next
-	
-edit:
-	li      t2 1    
-	bne 	%flag t2 loop_next
-        sw      t2 (%copy_array_address) 
-        j 	loop_next
-        
-edit_flag:
-	li 	%flag 2
-
-loop_next:
-        addi    %copy_array_address %copy_array_address 4
-        addi    %n %n -1
-
-        bnez    %n loop
-        
-        lw	%n n
-        la      %copy_array_address copy_array
-	
-	
-.end_macro
-
-# Макрос для вывода строк и подсказок
-# x - регистр со строкой, которую нужно вывести в консоль
-.macro PrintPrompt(%x)
-	la 	a0 %x    
-	li 	a7 4           
-        ecall
-.end_macro
-
-# Макрос для вывода целых чисел
-# x - регистр с числом, которое нужно вывести в консоль
-.macro PrintNumber(%x)
-	li      a7 1
-        mv      a0 %x       
-        ecall
-.end_macro
-
-# Макрос для ввода целых чисел
-# x - регистр, куда нужно записать число, которое введёт пользователь
-.macro InputNumber(%x)
-	li      a7 5
-        ecall
-        mv      %x a0
-.end_macro
-
-# Макрос для выхода из программы
-.macro Exit()
-	li      a7 10
-        ecall
-.end_macro
 ```
 
 ## Лог программы
