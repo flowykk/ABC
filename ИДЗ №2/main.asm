@@ -1,8 +1,18 @@
 .data
-x:       .float 2  # Пи/4 в радианах (значение x, которое мы вычисляем)
-pi:	 .float 3.14159265
-result:  .float 0           # Результат вычисления тангенса x
-accuracy: .float 0.000005    # Точность вычисления
+x:       .double 1.57  # Пи/4 в радианах (значение x, которое мы вычисляем)
+pi:	 .double 3.14159265
+result:  .double 0    # Результат вычисления тангенса x
+accuracy: .double 0.000005    # Точность вычисления
+
+.macro factorial(%x)
+    li a1, 1                # Инициализировать результат (a1) в 1
+    li t1, 1                # Инициализировать счетчик цикла (t1) в 1
+
+    factorial_loop:
+        mul a1, a1, t1      # Умножить результат (a1) на счетчик цикла (t1)
+        addi t1, t1, 1      # Увеличить счетчик цикла на 1
+        ble t1, %x, factorial_loop  # Повторять цикл, пока счетчик цикла меньше входного числа (a0)
+.end_macro
 
 .macro PrintNumber(%x)
 	li      a7 1
@@ -24,49 +34,94 @@ accuracy: .float 0.000005    # Точность вычисления
 .globl main
 
 main:
-    # Приведение x к интервалу от -π до π
-    	flw 		ft2 x t2         # Загрузка x в регистр $f2
-    	flw 		ft4 pi t4        # Загрузка значения π в регистр $f4
-    	#fdiv.s 		ft2 ft2 ft4      # Деление x на π, чтобы привести x к интервалу от -1 до 1
-    	
-    	fadd.s		ft1 ft1 ft2
-    	
+    # Приведение x к интервалу от -π до π	
+    	fld 		ft2 x t2         # Загрузка x в регистр $f2
+    	fld 		ft4 pi t4        # Загрузка значения π в регистр $f4
+    	#fdiv.d 		ft2 ft2 ft4      # Деление x на π, чтобы привести x к интервалу от -1 до 1
+    	fld 		ft6 x t6
+	
+	#sin result
+	fld		ft8 result a4
+	fld		ft3 result a3
+	fmv.d   	ft8 ft2
+	fmv.d   	ft3 ft8
+	
+sin:	
     	li 		t0 1             # Инициализация счетчика
-    	li 		t1 1             # Инициализация знака члена ряда
-    	li 		t2 3             # Начинаем с x^3 (первый член ряда с нечетным показателем)
-    	li 		t3 3             # Инициализация знаменателя (начиная с 3)
+    	li 		t2 -1             # Инициализация знака члена ряда
 	
+	li 		t4 5		 # !!! ВРЕМЕННЫЙ СЧЕТЧИК
+    	
+calculate_sin:
+	#t5 - (2n+1)!
+	fmv.d   	ft3 ft8
 	
-	    li 		t4 5		 # !!! ВРЕМЕННЫЙ СЧЕТЧИК
-	
-    	fcvt.d.w	ft5 t0 
-    	fmv.d   	ft6 ft2
-calculate_tan:
+	li 		t3 2
+	mv 		t5 t0
+	mul		t5 t5 t3 
+	addi 		t5 t5 1
+	factorial(t5)
+	mv 		t5 a1
+	fcvt.d.w	ft5 t5
 
-	    fmv.d   	fa0 ft6
-    	li              a7 2                    # Вывод числа двойной точности
-    	ecall
-    	li      a0 '\n'
-      li      a7 11
-      ecall
-
-    	fmul.s 		ft6 ft6 ft2  	 # Возведение x в квадрат
-    	fmul.s 		ft6 ft6 ft2  	 # Возведение x в квадрат
-    	
-    	fdiv.s 		ft5 ft6 ft5 	 # Вычисление x^n / n
-    	fcvt.d.w	ft10 t1 
-    	fmul.s 		ft5 ft5 ft10 	 # Применение знака к члену ряда
-    	fadd.s		ft1 ft1 ft5  	 # Прибавление члена ряда к результату
-    	
-
-    	
-    	
-    	addi 		t0 t0 1	 	 # +1 к счетчику
-    	addi 		t1 t1 -1    	 # Смена знака
-    	addi 		t2 t2 2     	 # Переход к следующему члену ряда (увеличение показателя степени на 2)
-    	addi 		t3 t3 2     	 # Увеличение знаменателя на 2
-    	ble  		t0 t4 calculate_tan # Проверка на окончание ряда (счетчик не равен 0)
+    	fmul.d 		ft6 ft6 ft2  	 # Возведение x в квадрат
+    	fmul.d 		ft6 ft6 ft2  	 # Возведение x в квадрат
     
-    	#fmul.s 		ft4 ft4 ft2
+    	fdiv.d 		ft1 ft6 ft5
+    	
+    	fcvt.d.w	ft10 t2
+    	fmul.d 		ft1 ft1 ft10
+    	
+    	fadd.d		ft8 ft8 ft1
+	
+	fdiv.d 		ft4 ft8 ft3
+	
+	#li 		t5 -1
+	#fcvt.d.w	ft5 t5
+	#fadd.d 		ft4 ft4 ft5
+	#fabs.d		ft4 ft4
+	
+	fmv.d   	fa0 ft4
+	li              a7 3                   # Вывод числа двойной точности
+	ecall
+	li      	a0 '\n'
+	li      	a7 11
+	ecall
+	fmv.d   	fa0 ft8
+	li              a7 3                   # Вывод числа двойной точности
+	ecall
+	li      	a0 '\n'
+	li      	a7 11
+	ecall
+	fmv.d   	fa0 ft3
+	li              a7 3                   # Вывод числа двойной точности
+	ecall
+	li      	a0 '\n'
+	li      	a7 11
+	ecall
+	li      	a0 '\n'
+	li      	a7 11
+	ecall
+    	
+    	bgtz 		t2 change_sign
+    	li 		t2 1
+    	j		sin_next
+    	
+change_sign:
+	li t2 -1
+    	
+sin_next:
+	addi 		t0 t0 1	 	 # +1 к счетчику
+    	
+    	ble  		t0 t4 calculate_sin # Проверка на окончание ряда (счетчик не равен 0)
+    
+    
+	fmv.d   	fa0 ft8
+	li              a7 3                   # Вывод числа двойной точности
+	ecall
+	li      	a0 '\n'
+	li      	a7 11
+	ecall
+
     	
 Exit()
