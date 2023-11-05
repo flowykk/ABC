@@ -11,7 +11,7 @@ __Условие задачи__: Разработать программу, вы
 ### Оценка 4-5:
 - Приведено решение задачи на ассемблере. Ввод вещественного числа x. Вывод данных осуществляет в консоль.
 - Присутсвуют комментарии, поясняющие выполняемые действия.
-- В отчёте ниже приведены [Лог программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D0%BB%D0%BE%D0%B3-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B), результаты работы [Тестовой py-программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D0%BB%D0%BE%D0%B3-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F), [Тестовой asm-программы]() и [Скриншоты](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D1%80%D0%B0%D1%81%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D0%BC-%D0%BD%D0%B0-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8%D1%85-%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D0%B0%D1%85-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-%D1%81-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8).
+- В отчёте ниже приведены [Лог программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D0%BB%D0%BE%D0%B3-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B), результаты работы [Тестовой py-программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D0%BB%D0%BE%D0%B3-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F), [Тестовой asm-программы](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D0%BB%D0%BE%D0%B3-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-%D0%BD%D0%B0-%D0%B0%D1%81%D1%81%D0%B5%D0%BC%D0%B1%D0%BB%D0%B5%D1%80%D0%B5) и [Скриншоты](https://github.com/flowykk/ABC/blob/main/%D0%98%D0%94%D0%97%20%E2%84%962/readme.md#%D1%80%D0%B0%D1%81%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D0%BC-%D0%BD%D0%B0-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8%D1%85-%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D0%B0%D1%85-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-%D1%81-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8).
 
 ### Оценка 6-7:
 - В программе присутствут подпрограммы с передачей аргументов через параметры.
@@ -312,7 +312,7 @@ tg(x) = 2.185093756481239
 -- program is finished running (0) --
 ```
 
-## Рассмотрим на нескольких скриншотах работу программы с различными входными данными.
+## Рассмотрим на нескольких скриншотах работу главной программы с различными входными данными.
 <img width="1440" alt="Снимок экрана 2023-11-05 в 15 39 22" src="https://github.com/flowykk/ABC/assets/71427624/bea499d0-88bc-412c-bb56-07d0606505bd">
 <img width="1440" alt="Снимок экрана 2023-11-05 в 15 39 38" src="https://github.com/flowykk/ABC/assets/71427624/df5042ac-5bb8-4fe5-b86d-bc23655975c9">
 <img width="1440" alt="Снимок экрана 2023-11-05 в 15 39 58" src="https://github.com/flowykk/ABC/assets/71427624/f80cd14d-a615-4664-96c7-fd739405524d">
