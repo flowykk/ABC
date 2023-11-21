@@ -67,4 +67,3 @@ er_read:
     	li	a7 4
     	ecall
 	Exit
-
