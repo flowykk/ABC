@@ -8,7 +8,8 @@ new_str:     .space SIZE
 ln:     .asciz "\n"
 read_str:     	.asciz "Строка, прочитнная из файла: "
 result_str:	.asciz "Полученный результат: "
-prompt:         .asciz "Введите путь к файлу: "
+prompt:         .asciz "Введите путь к файлу, откуда считать данные: "
+prompt2:         .asciz "Введите путь к файлу, куда записать данные: "
 er_name_mes:    .asciz "Указан некорректный путь к файлу!\n"
 er_read_mes:    .asciz "Произошла ошибка во время чтения из файла!\n"
 file_name:      .space	NAME_SIZE
@@ -30,8 +31,6 @@ end:
 
 .macro dotask(%address)
 do:   
-	mv 	a2 %address
-
 	CreateString(new_str, t6)
 	li 	t0 0
 	
@@ -61,7 +60,7 @@ end:
 	addi	t6 t6 -1
 	li	t4 0
 	sb	t4 (t6)
-	mv %address a2
+	mv 	a6 t3
 .end_macro
 
 .macro InputString(%string_address, %x)
@@ -88,6 +87,7 @@ end:
       	mv 	a0 %x
       	li 	a7 4
       	ecall
+      	PrintPrompt(ln)
 .end_macro
 
 .macro PrintNumber(%x)
