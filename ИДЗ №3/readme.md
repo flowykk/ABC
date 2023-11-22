@@ -52,3 +52,17 @@ __Условие задачи__: Разработать программу, ко
 ### Лог программы
 
 ## Рассмотрим на нескольких скриншотах работу главной программы с различными входными данными.
+# Пример 1
+<img width="1440" alt="Снимок экрана 2023-11-22 в 19 34 54" src="https://github.com/flowykk/ABC/assets/71427624/2c2091a8-6af7-445a-bab6-aef6e5182a5b">
+<img width="685" alt="Снимок экрана 2023-11-22 в 19 35 32" src="https://github.com/flowykk/ABC/assets/71427624/49ff75b1-e4b5-4df1-98eb-64dc6a91b14f">
+
+# Пример 2
+<img width="1440" alt="Снимок экрана 2023-11-22 в 19 36 11" src="https://github.com/flowykk/ABC/assets/71427624/d4abaf6c-fc35-4ae0-9dd0-9a0c15f6ef2e">
+
+# Пример 3
+<img width="1440" alt="Снимок экрана 2023-11-22 в 19 37 37" src="https://github.com/flowykk/ABC/assets/71427624/82006af4-a777-4a92-9822-ea5fe0157e23">
+<img width="683" alt="Снимок экрана 2023-11-22 в 19 37 30" src="https://github.com/flowykk/ABC/assets/71427624/59cdccf3-ce98-48ae-8791-e89be9867b89">
+
+# Пример 4
+<img width="1440" alt="Снимок экрана 2023-11-22 в 19 38 52" src="https://github.com/flowykk/ABC/assets/71427624/5c6e7466-8493-4926-8d03-42f89974788e">
+<img width="683" alt="Снимок экрана 2023-11-22 в 19 38 35" src="https://github.com/flowykk/ABC/assets/71427624/1be043b9-af6b-4e3d-b15d-5e60724dfa84">
