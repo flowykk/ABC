@@ -4,15 +4,21 @@
 .global main
 
 main: 
-
-	lui  	t3, 0xffff0 
+	PrintPrompt(prompt)
 	InputNumber(t1)
+	lui  	t3, 0xffff0 
 	li t4 16
-	if t1 > 16
-		flag
-		a = t1 / 16
-		a *= 16
-		a = t1 - a
+	bge t1 t4 dot
+	li t6 0
+	j loop
+
+dot:
+	mv t6 t1
+	div t1 t1 t4
+	mul t1 t1 t4
+	sub t1 t6 t1
+
+	li t6 1
 	
 loop:
 	li 	t0 0	
@@ -67,7 +73,7 @@ loop:
 	beq	t0 t4 check
 
 num_0:
-	li    	t5 0x86
+	li    	t5 0x3f
 	j indicator_loop
 
 num_1:
@@ -80,6 +86,7 @@ num_2:
 
 num_3:
 	li    	t5 0x4f
+	
 	j indicator_loop
 
 num_4:
@@ -132,6 +139,13 @@ num_15:
 	j indicator_loop
 
 indicator_loop:
+	bgtz 	t6 set_dot
+	j next
+	
+set_dot:
+	addi 	t5 t5 0x80 
+
+next:
 	mv 	t2 t5
     	sb    	t2 0x10(t3)
     	Sleep()
@@ -143,7 +157,7 @@ indicator_loop:
     	Sleep()
     	li    	t2 0x0
     	sb    	t2 0x11(t3)
-    	j indicator_loop
+    	j next
 
 check:
 	Exit()
