@@ -22,8 +22,9 @@ __Работу выполнил__: Рахманов Данила Дмитрие�
 
 
 ### Пример 2: num = 10
-<img width="1440" alt="Снимок экрана 2023-11-24 в 17 28 17" src="https://github.com/flowykk/ABC/assets/71427624/603d15da-8b7c-4971-a529-03b2a5258672">
-<img width="1440" alt="Снимок экрана 2023-11-24 в 17 29 15" src="https://github.com/flowykk/ABC/assets/71427624/a09d90e3-fb89-481c-8894-277e466787df">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 17 30 41" src="https://github.com/flowykk/ABC/assets/71427624/54e149b4-52d9-4b60-9e62-74a2262dd5ed">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 17 30 50" src="https://github.com/flowykk/ABC/assets/71427624/80bcfc7b-d1d8-40eb-841d-d916aa784a6a">
+
 
 ### Пример 3: num = 15
 <img width="1440" alt="Снимок экрана 2023-11-24 в 17 15 35" src="https://github.com/flowykk/ABC/assets/71427624/b14c27b6-354a-4d6b-a9e4-42e8224529df">
