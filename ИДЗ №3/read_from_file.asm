@@ -1,24 +1,18 @@
 .include "macrolib.asm"
-  
+ 
 .text
 .global read_from_file
-read_from_file: 
-    	# Вывод подсказки
-	PrintPrompt(prompt)
-	
+read_from_file: 	
 	# Ввод имени файла с консоли
-	la      a0 file_name
-	li      a1 NAME_SIZE
-	li      a7 8
-	ecall
+	InputFileName(prompt, file_name, NAME_SIZE)
 	
 	# Убрать перевод строки
 	li	t4 '\n'
 	la	t5 file_name
 	
 loop:
-	lb	t6  (t5)
-	beq 	t4	t6	replace
+	lb	t6 (t5)
+	beq 	t4 t6 replace
 	addi 	t5 t5 1
 	b	loop
 	
@@ -34,10 +28,10 @@ replace:
     	mv   	s0 a0       	# Сохранение дескриптора файла
 
     	# Чтение информации из открытого файла
-    	li   	a7, 63       	# Системный вызов для чтения из файла
-    	mv   	a0, s0       	# Дескриптор файл
-    	la   	a1, main_str   	# Адрес буфера для читаемого текста
-    	li   	a2, SIZE 	# Размер читаемой порции
+    	li   	a7 63       	# Системный вызов для чтения из файла
+    	mv   	a0 s0       	# Дескриптор файл
+    	la   	a1 main_str   	# Адрес буфера для читаемого текста
+    	li   	a2 SIZE 	# Размер читаемой порции
     	ecall             	# Чтение
     	
     	# Проверка на корректное чтение
@@ -45,8 +39,8 @@ replace:
     	mv   	s2 a0       	# Сохранение длины текста
 
     	# Закрытие файла
-    	li   	a7, 57       	# Системный вызов закрытия файла
-    	mv   	a0, s0       	# Дескриптор файла
+    	li   	a7 57       	# Системный вызов закрытия файла
+    	mv   	a0 s0       	# Дескриптор файла
     	ecall             	# Закрытие файла
 
     	# Установка нуля в конце прочитанной строки
@@ -59,14 +53,12 @@ ret
 
 er_name:
     	# Сообщение об ошибочном имени файла
-    	la	a0 er_name_mes
-    	li	a7 4
-    	ecall
+    	li 	t1 1 
+  	ShowMessage(er_name_mes, t1)
 	Exit()
 	
 er_read:
     	# Сообщение об ошибочном чтении
-    	la	a0 er_read_mes
-    	li	a7 4
-    	ecall
-	Exit
+    	li 	t1 1 
+  	ShowMessage(er_read_mes, t1)
+	Exit()
