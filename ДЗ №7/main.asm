@@ -8,6 +8,11 @@ main:
 	lui  	t3, 0xffff0 
 	InputNumber(t1)
 	li t4 16
+	if t1 > 16
+		flag
+		a = t1 / 16
+		a *= 16
+		a = t1 - a
 	
 loop:
 	li 	t0 0	
