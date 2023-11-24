@@ -8,26 +8,32 @@ main:
 	jal read_from_file
 
 	# Вывод вывод содержания файла
-    	PrintPrompt(read_str)
-    	PrintString(t5)
+    	PrintString(read_str, t5)
 
 	# Вызов подпрограммы для обработки строки
   	StringProcessing(t5)
   	
   	# Возможность пользователя выбрать вывести результат или нет
   	UserDecision(t1)
-  	bgtz a0 print_result
+  	bgtz a3 print_result
   	j no_result
 
 # Пользователь хочет видеть результат
 print_result:
   	# Вывод результата
-  	#PrintPrompt(result_str)
-  	PrintString(t3)
+  	PrintString(res, t3)
 
 no_result:
   	# Запись результата в файл
   	jal out_in_file
+  	
+  	# Вывода диалогового окна с сообщением об успешной записи результата в файл
+  	li 	t1 1 
+  	ShowMessage(success, t1)
+  	
+  	# Вызов тестовых подпрограмм
+  	jal test
+  	jal test_macro
   	
   	# Завершение работы программы
   	Exit()
