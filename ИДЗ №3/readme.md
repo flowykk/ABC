@@ -192,24 +192,6 @@ Y
 
 #### Тест  №4
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 06" src="https://github.com/flowykk/ABC/assets/71427624/bf7d144e-db9a-4fa4-87b8-3a5cb1b47f33">
-<img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 27" src="https://github.com/flowykk/ABC/assets/71427624/7c941944-94c3-4c44-bd2b-4635c4401626">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 33" src="https://github.com/flowykk/ABC/assets/71427624/086b5fd4-6200-4808-8bd1-17e60dda928a">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 53" src="https://github.com/flowykk/ABC/assets/71427624/6b4890dc-26a2-49fd-9e01-69e808aaed1b">
-<img width="1440" alt="Снимок экрана 2023-11-24 в 20 12 09" src="https://github.com/flowykk/ABC/assets/71427624/12076292-8f99-4662-8b18-d151754a3d9c">
 <img width="684" alt="Снимок экрана 2023-11-24 в 20 12 27" src="https://github.com/flowykk/ABC/assets/71427624/45f42b75-7086-4a32-90fc-5180053d557e">
-
-
-# Пример 1
-<img width="1440" alt="Снимок экрана 2023-11-22 в 19 34 54" src="https://github.com/flowykk/ABC/assets/71427624/2c2091a8-6af7-445a-bab6-aef6e5182a5b">
-<img width="685" alt="Снимок экрана 2023-11-22 в 19 35 32" src="https://github.com/flowykk/ABC/assets/71427624/49ff75b1-e4b5-4df1-98eb-64dc6a91b14f">
-
-# Пример 2
-<img width="1440" alt="Снимок экрана 2023-11-22 в 19 36 11" src="https://github.com/flowykk/ABC/assets/71427624/d4abaf6c-fc35-4ae0-9dd0-9a0c15f6ef2e">
-
-# Пример 3
-<img width="1440" alt="Снимок экрана 2023-11-22 в 19 37 37" src="https://github.com/flowykk/ABC/assets/71427624/82006af4-a777-4a92-9822-ea5fe0157e23">
-<img width="683" alt="Снимок экрана 2023-11-22 в 19 37 30" src="https://github.com/flowykk/ABC/assets/71427624/59cdccf3-ce98-48ae-8791-e89be9867b89">
-
-# Пример 4
-<img width="1440" alt="Снимок экрана 2023-11-22 в 19 38 52" src="https://github.com/flowykk/ABC/assets/71427624/5c6e7466-8493-4926-8d03-42f89974788e">
-<img width="683" alt="Снимок экрана 2023-11-22 в 19 38 35" src="https://github.com/flowykk/ABC/assets/71427624/1be043b9-af6b-4e3d-b15d-5e60724dfa84">
