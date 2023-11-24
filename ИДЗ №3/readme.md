@@ -172,20 +172,20 @@ Y
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 00 15" src="https://github.com/flowykk/ABC/assets/71427624/c87f4cf0-ce77-4a3b-93e5-b4b532072237">
 
 ### Работа тестовых программ
-#### 
+#### Тест  №1
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 01 00" src="https://github.com/flowykk/ABC/assets/71427624/d69a7216-cbbb-4bc9-bca2-c0f3e4008480">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 01 16" src="https://github.com/flowykk/ABC/assets/71427624/275868cc-1153-4779-9052-971158d79c6f">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 01 28" src="https://github.com/flowykk/ABC/assets/71427624/819bc938-2570-4d35-a1b4-7f8289c09a84">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 01 44" src="https://github.com/flowykk/ABC/assets/71427624/54ddb81a-7b78-4185-8387-f0f542aa14f8">
 <img width="688" alt="Снимок экрана 2023-11-24 в 20 02 06" src="https://github.com/flowykk/ABC/assets/71427624/ff041dc7-8bd1-4f9d-989b-e6cecdb62ebf">
 
-тест 2
+#### Тест  №2
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 21" src="https://github.com/flowykk/ABC/assets/71427624/42eefa6b-73ea-48eb-a106-11189849a71f">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 46" src="https://github.com/flowykk/ABC/assets/71427624/940ea32b-0504-46c2-ac1e-c7b1bec7ce3c">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 55" src="https://github.com/flowykk/ABC/assets/71427624/17167fa5-fdcb-4e16-9a83-5d3ccf9000cb">
 <img width="690" alt="Снимок экрана 2023-11-24 в 20 03 10" src="https://github.com/flowykk/ABC/assets/71427624/ca42a91a-dc36-4cbc-bc8a-702d29845f66">
 
-тест 3
+#### Тест  №3
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 16" src="https://github.com/flowykk/ABC/assets/71427624/f107466d-0089-4782-960e-f7eb4a736135">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 39" src="https://github.com/flowykk/ABC/assets/71427624/8beeab4a-c886-47aa-9f9e-4201064434b0">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 45" src="https://github.com/flowykk/ABC/assets/71427624/41658bc1-a1e0-4b02-9021-8390450b8829">
@@ -193,7 +193,7 @@ Y
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 10 19" src="https://github.com/flowykk/ABC/assets/71427624/39b8eafa-262f-4070-9bfe-f07acab55515">
 <img width="688" alt="Снимок экрана 2023-11-24 в 20 10 37" src="https://github.com/flowykk/ABC/assets/71427624/785f7480-1dc8-4b89-bf17-30ea07af2a1c">
 
-тест 4
+#### Тест  №4
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 06" src="https://github.com/flowykk/ABC/assets/71427624/bf7d144e-db9a-4fa4-87b8-3a5cb1b47f33">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 27" src="https://github.com/flowykk/ABC/assets/71427624/7c941944-94c3-4c44-bd2b-4635c4401626">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 33" src="https://github.com/flowykk/ABC/assets/71427624/086b5fd4-6200-4808-8bd1-17e60dda928a">
