@@ -148,6 +148,10 @@ Y
 ```
 
 ## Рассмотрим на нескольких скриншотах работу главной программы с различными входными данными.
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 14 11" src="https://github.com/flowykk/ABC/assets/71427624/d132dbcc-9074-43f8-b35f-f2c8274fd125">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 14 29" src="https://github.com/flowykk/ABC/assets/71427624/bd92af8d-bbde-48f9-bd3f-31ef7a536d6b">
+
+
 <img width="1440" alt="Снимок экрана 2023-11-24 в 19 58 55" src="https://github.com/flowykk/ABC/assets/71427624/f6c77f2e-7437-4218-88d6-23a5b24b316a">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 19 59 06" src="https://github.com/flowykk/ABC/assets/71427624/af86e357-7fdf-4bb2-b210-d93e371f4efc">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 19 59 22" src="https://github.com/flowykk/ABC/assets/71427624/1083c5f3-d1cd-4f64-94de-a0bbaf16387d">
@@ -170,7 +174,21 @@ Y
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 04 02" src="https://github.com/flowykk/ABC/assets/71427624/ba5babe1-d617-40ed-b3bc-21f59fbcf975">
 <img width="690" alt="Снимок экрана 2023-11-24 в 20 03 10" src="https://github.com/flowykk/ABC/assets/71427624/ca42a91a-dc36-4cbc-bc8a-702d29845f66">
 
+тест 3
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 16" src="https://github.com/flowykk/ABC/assets/71427624/f107466d-0089-4782-960e-f7eb4a736135">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 39" src="https://github.com/flowykk/ABC/assets/71427624/8beeab4a-c886-47aa-9f9e-4201064434b0">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 08 45" src="https://github.com/flowykk/ABC/assets/71427624/41658bc1-a1e0-4b02-9021-8390450b8829">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 09 06" src="https://github.com/flowykk/ABC/assets/71427624/d9d4c937-737e-4dd3-ba8b-14c6dbb87a4f">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 10 19" src="https://github.com/flowykk/ABC/assets/71427624/39b8eafa-262f-4070-9bfe-f07acab55515">
+<img width="688" alt="Снимок экрана 2023-11-24 в 20 10 37" src="https://github.com/flowykk/ABC/assets/71427624/785f7480-1dc8-4b89-bf17-30ea07af2a1c">
 
+тест 4
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 06" src="https://github.com/flowykk/ABC/assets/71427624/bf7d144e-db9a-4fa4-87b8-3a5cb1b47f33">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 27" src="https://github.com/flowykk/ABC/assets/71427624/7c941944-94c3-4c44-bd2b-4635c4401626">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 33" src="https://github.com/flowykk/ABC/assets/71427624/086b5fd4-6200-4808-8bd1-17e60dda928a">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 11 53" src="https://github.com/flowykk/ABC/assets/71427624/6b4890dc-26a2-49fd-9e01-69e808aaed1b">
+<img width="1440" alt="Снимок экрана 2023-11-24 в 20 12 09" src="https://github.com/flowykk/ABC/assets/71427624/12076292-8f99-4662-8b18-d151754a3d9c">
+<img width="684" alt="Снимок экрана 2023-11-24 в 20 12 27" src="https://github.com/flowykk/ABC/assets/71427624/45f42b75-7086-4a32-90fc-5180053d557e">
 
 
 # Пример 1
