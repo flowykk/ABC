@@ -181,10 +181,8 @@ Y
 
 тест 2
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 21" src="https://github.com/flowykk/ABC/assets/71427624/42eefa6b-73ea-48eb-a106-11189849a71f">
-<img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 39" src="https://github.com/flowykk/ABC/assets/71427624/a514c652-9dc8-46b6-a8bb-f25cbc1e1778">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 46" src="https://github.com/flowykk/ABC/assets/71427624/940ea32b-0504-46c2-ac1e-c7b1bec7ce3c">
 <img width="1440" alt="Снимок экрана 2023-11-24 в 20 02 55" src="https://github.com/flowykk/ABC/assets/71427624/17167fa5-fdcb-4e16-9a83-5d3ccf9000cb">
-<img width="1440" alt="Снимок экрана 2023-11-24 в 20 04 02" src="https://github.com/flowykk/ABC/assets/71427624/ba5babe1-d617-40ed-b3bc-21f59fbcf975">
 <img width="690" alt="Снимок экрана 2023-11-24 в 20 03 10" src="https://github.com/flowykk/ABC/assets/71427624/ca42a91a-dc36-4cbc-bc8a-702d29845f66">
 
 тест 3
