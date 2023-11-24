@@ -2,19 +2,12 @@
   
 .data
 default_name: .asciz "testout.txt"      # Имя файла по умолчанию
-# Это выводимый текст
 
 .text
 .global out_in_file
 out_in_file:
-	# Вывод подсказки
-	PrintPrompt(prompt2)
-
 	# Ввод имени файла с консоли эмулятора
-	la	a0 file_name
-	li      a1 NAME_SIZE
-	li      a7 8
-	ecall
+	InputFileName(prompt2, file_name, NAME_SIZE)
 	
 	# Убрать перевод строки
 	li  	t4 '\n'
@@ -46,7 +39,7 @@ out:
 	li   	a7 64       	# system call for write to file
 	mv   	a0 s6       	# file descriptor
 	mv   	a1 a6   	# address of buffer from which to write
-	li   	a2 44       	# hardcoded buffer length
+	li   	a2 100       	# hardcoded buffer length
 	ecall             	# write to file
 
 	# Close the file
