@@ -1,15 +1,15 @@
 #include <iostream>
 #include <pthread.h>
-#include <unistd.h> // Для функции sleep()
+#include <unistd.h>
 #include <fstream>
 #include <random>
+#include <vector>
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t student_cond = PTHREAD_COND_INITIALIZER;
 pthread_cond_t teacher_cond = PTHREAD_COND_INITIALIZER;
 
 std::vector<int> tickets_number;
-int current_ticket = 0;
 int answered_students = 0;
 bool is_teacher_active = false;
 int current_student = 0;
@@ -30,45 +30,49 @@ void *StudentThread(void *arg) {
             break;
         }
 
-        // Студент выбирает билет
-        int ticket = ++current_ticket;
-//        sleep(1);
-        std::cout << "Студент " << student_id << " выбрал билет: " << tickets_number[student_id] << std::endl;
-        output_file << "Студент " << student_id << " выбрал билет: " << tickets_number[student_id] << std::endl;
+        int queue_time = rand() % 2 + 1;
+        int preparation_time = rand() % 3 + 1;
 
-        // Готовится к ответу
-        int preparation_time = rand() % 5 + 1; // Генерация случайного времени подготовки (от 1 до 5 секунд)
-        std::cout << "Студент " << student_id << " готовится к ответу..." << std::endl;
-        output_file << "Студент " << student_id << " готовится к ответу..." << std::endl;
+        sleep(queue_time);
+        // Студент выбирает билет
+        std::cout << "Студент " << student_id << " выбрал билет: " << tickets_number[student_id - 1] << std::endl;
+        output_file << "Студент " << student_id << " выбрал билет: " << tickets_number[student_id - 1] << std::endl;
+
         pthread_mutex_unlock(&mutex);
-        sleep(preparation_time);
+
+        // Очередь перед следующим студентом
+        sleep(queue_time);
 
         // Защита билета
         pthread_mutex_lock(&mutex);
-        std::cout << "Студент " << student_id << " защищает билет: " << tickets_number[student_id] << std::endl;
-        output_file << "Студент " << student_id << " защищает билет: " << tickets_number[student_id] << std::endl;
-        is_teacher_active = true; // Устанавливаем флаг, что преподаватель может действовать
+        std::cout << "Студент " << student_id << " защищает билет: " << tickets_number[student_id - 1] << std::endl;
+        output_file << "Студент " << student_id << " защищает билет: " << tickets_number[student_id - 1] << std::endl;
+        sleep(preparation_time);
+        is_teacher_active = true;
         current_student = student_id;
         answered_students++;
-        pthread_cond_signal(&teacher_cond); // Сигнал преподавателю
-
-        std::cout << "студент ждет вердикт" << std::endl;
-        output_file << "студент ждет вердикт" << std::endl;
-
-        // Ожидание оценки
-        pthread_cond_wait(&student_cond, &mutex);
+        pthread_cond_signal(&teacher_cond);
         pthread_mutex_unlock(&mutex);
-        break; // Завершение потока после ответа
+        sleep(preparation_time);
+
+        // Ожидание ответа от преподавателя
+        pthread_mutex_lock(&mutex);
+        while (is_teacher_active) {
+            pthread_cond_wait(&student_cond, &mutex);
+        }
+        pthread_mutex_unlock(&mutex);
+        sleep(1);
+
+        break;
     }
 
-    return nullptr;
+    pthread_exit(NULL); // Явное завершение потока
 }
 
 void *TeacherThread(void *arg) {
     while (true) {
         pthread_mutex_lock(&mutex);
 
-        // Проверка, ответили ли уже все студенты
         if (answered_students >= num_students) {
             std::cout << "Все студенты сдали экзамен. Программа завершена. Результат записан в выходной файл.";
             output_file << "Все студенты сдали экзамен. ";
@@ -76,22 +80,25 @@ void *TeacherThread(void *arg) {
             break;
         }
 
-        // Ожидание сигнала от студента
         while (!is_teacher_active) {
             pthread_cond_wait(&teacher_cond, &mutex);
         }
 
-        // Преподаватель оценивает билет
-        int grade = rand() % 10 + 1; // Генерация случайной оценки (от 1 до 10)
+        int checking_time = rand() % 2 + 1;
+
+        std::cout << "Преподаватель проверяет работу студента " << current_student << std::endl;
+        output_file << "Преподаватель проверяет работу студента " << current_student << std::endl;
+        sleep(checking_time);
+        int grade = rand() % 10 + 1;
         std::cout << "Преподаватель выставляет оценку " << grade << " студенту " << current_student << std::endl;
         output_file << "Преподаватель выставляет оценку " << grade << " студенту " << current_student << std::endl;
 
-        is_teacher_active = false; // Сбрасываем флаг
-        pthread_cond_signal(&student_cond); // Сигнал студенту
+        is_teacher_active = false;
+        pthread_cond_signal(&student_cond);
         pthread_mutex_unlock(&mutex);
     }
 
-    return nullptr;
+    pthread_exit(NULL);
 }
 
 int main() {
@@ -140,12 +147,19 @@ int main() {
     pthread_t students[num_students];
     pthread_t teacher;
 
-
     for (int i = 0; i < num_students; ++i) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<int> dis(2, 30);
+
         int ticket_number = dis(gen);
+        auto ind = std::find(tickets_number.begin(), tickets_number.end(), ticket_number);
+
+        while (ind != tickets_number.end())
+        {
+            ticket_number = dis(gen);
+            ind = std::find(tickets_number.begin(), tickets_number.end(), ticket_number);
+        }
 
         tickets_number.push_back(ticket_number);
     }
@@ -153,19 +167,19 @@ int main() {
     // Создание потоков студентов
     for (int i = 0; i < num_students; ++i) {
         int *student_id = new int(i + 1);
-        pthread_create(&students[i], nullptr, StudentThread, (void *)student_id);
+        pthread_create(&students[i], NULL, StudentThread, (void *)student_id);
     }
 
     // Создание потока преподавателя
-    pthread_create(&teacher, nullptr, TeacherThread, nullptr);
+    pthread_create(&teacher, NULL, TeacherThread, NULL);
 
     // Ожидание завершения потоков студентов
     for (int i = 0; i < num_students; ++i) {
-        pthread_join(students[i], nullptr);
+        pthread_join(students[i], NULL);
     }
 
     // Ожидание завершения потока преподавателя
-    pthread_join(teacher, nullptr);
+    pthread_join(teacher, NULL);
 
     return 0;
 }
