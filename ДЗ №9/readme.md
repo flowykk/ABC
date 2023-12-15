@@ -12,49 +12,52 @@ __Работу выполнил__: Рахманов Данила Дмитрие�
 ## Код программы
 ### [Главный файл программы](main.cpp)
 
-## Лог программы
+## Примерный лог программы
 ```
-Generator Thread 0 sent number 8 to buffer.
-Generator Thread 1 sent number 10 to buffer.
-Generator Thread 0 sent number 14 to buffer.
-Generator Thread 1 sent number 19 to buffer.
-Generator Thread 0 sent number 5 to buffer.
-Generator Thread 1 sent number 19 to buffer.
-Generator Thread 2 sent number 4 to buffer.
-Generator Thread 1 sent number 1 to buffer.
-Generator Thread 2 sent number 6 to buffer.
-Generator Thread 3 sent number 13 to buffer.
-Generator Thread 2 sent number 3 to buffer.
-Generator Thread 1 sent number 8 to buffer.
-Generator Thread 2 sent number 10 to buffer.
-Generator Thread 1 sent number 13 to buffer.
-Generator Thread 0 sent number 10 to buffer.
-Generator Thread 1 sent number 10 to buffer.
-SumThread summed numbers 10, 8 and sent result 18 to buffer.
-Generator Thread 1 sent number 1 to buffer.
-Generator Thread 2 sent number 14 to buffer.
-Generator Thread 1 sent number 19 to buffer.
-Generator Thread 0 sent number 17 to buffer.
-SumThread summed numbers 13, 6 and sent result 19 to buffer.
-SumThread summed numbers 19, 14 and sent result 33 to buffer.
-SumThread summed numbers 4, 19 and sent result 23 to buffer.
-SumThread summed numbers 13, 5 and sent result 18 to buffer.
-SumThread summed numbers 10, 8 and sent result 18 to buffer.
-SumThread summed numbers 3, 1 and sent result 4 to buffer.
-SumThread summed numbers 14, 1 and sent result 15 to buffer.
-SumThread summed numbers 10, 10 and sent result 20 to buffer.
-SumThread summed numbers 19, 18 and sent result 37 to buffer.
-SumThread summed numbers 19, 17 and sent result 36 to buffer.
-SumThread summed numbers 23, 33 and sent result 56 to buffer.
-SumThread summed numbers 15, 18 and sent result 33 to buffer.
-SumThread summed numbers 4, 18 and sent result 22 to buffer.
-SumThread summed numbers 56, 36 and sent result 92 to buffer.
-SumThread summed numbers 37, 20 and sent result 57 to buffer.
-SumThread summed numbers 22, 33 and sent result 55 to buffer.
-SumThread summed numbers 57, 92 and sent result 149 to buffer.
-SumThread summed numbers 149, 55 and sent result 204 to buffer.
-Final sum: 204
+Generator Thread sent number 13 to buffer
+Generator Thread sent number 4 to buffer
+Generator Thread sent number 10 to buffer
+Generator Thread sent number 18 to buffer
+Generator Thread sent number 14 to buffer
+Generator Thread sent number 20 to buffer
+Generator Thread sent number 19 to buffer
+Generator Thread sent number 16 to buffer
+Generator Thread sent number 18 to buffer
+Generator Thread sent number 7 to buffer
+Generator Thread sent number 13 to buffer
+SumThread summed numbers {4, 13} and sent result 17 to buffer
+Generator Thread sent number 20 to buffer
+Generator Thread sent number 10 to buffer
+SumThread summed numbers {18, 10} and sent result 28 to buffer
+Generator Thread sent number 2 to buffer
+Generator Thread sent number 8 to buffer
+Generator Thread sent number 14 to buffer
+Generator Thread sent number 17 to buffer
+Generator Thread sent number 6 to buffer
+Generator Thread sent number 6 to buffer
+Generator Thread sent number 12 to buffer
+SumThread summed numbers {18, 16} and sent result 34 to buffer
+SumThread summed numbers {20, 14} and sent result 34 to buffer
+SumThread summed numbers {17, 19} and sent result 36 to buffer
+SumThread summed numbers {10, 20} and sent result 30 to buffer
+SumThread summed numbers {13, 7} and sent result 20 to buffer
+SumThread summed numbers {6, 17} and sent result 23 to buffer
+SumThread summed numbers {12, 6} and sent result 18 to buffer
+SumThread summed numbers {2, 28} and sent result 30 to buffer
+SumThread summed numbers {14, 8} and sent result 22 to buffer
+SumThread summed numbers {34, 34} and sent result 68 to buffer
+SumThread summed numbers {30, 36} and sent result 66 to buffer
+SumThread summed numbers {23, 20} and sent result 43 to buffer
+SumThread summed numbers {30, 18} and sent result 48 to buffer
+SumThread summed numbers {68, 22} and sent result 90 to buffer
+SumThread summed numbers {43, 66} and sent result 109 to buffer
+SumThread summed numbers {90, 48} and sent result 138 to buffer
+SumThread summed numbers {138, 109} and sent result 247 to buffer
+Result: 247
 ```
 
-## Скриншот работы программы
-![Снимок экрана 2023-12-12 в 15 42 58](https://github.com/flowykk/ABC/assets/71427624/002ab2ee-95f1-43ee-89f5-93396fcdfdb1)
+## Скриншоты с демонстрацией работы программы
+<img width="1440" alt="Снимок экрана 2023-12-15 в 14 05 38" src="https://github.com/flowykk/ABC/assets/71427624/6e12839c-0389-4813-8460-19713957a572">
+
+![Снимок экрана 2023-12-15 в 14 06 29 (2)](https://github.com/flowykk/ABC/assets/71427624/9934ef0e-d092-4309-9815-ca6fb14ffb63)
+<img width="1440" alt="Снимок экрана 2023-12-15 в 14 06 29" src="https://github.com/flowykk/ABC/assets/71427624/0aaba2e9-cb52-4930-9845-aa28b048a4ea">
