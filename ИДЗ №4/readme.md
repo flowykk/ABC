@@ -318,8 +318,7 @@ void *TeacherThread(void *arg) {
 #### Пример 7
 ### Передача аргументов вручную; Количество студентов - 4
 #### Результат из терминала
-<img width="750" alt="Снимок экрана 2023-12-15 в 15 06 46" src="https://github.com/flowykk/ABC/assets/71427624/bcc24db4-d568-4ed5-9e03-fb6154d1e8f4">
-
+![Снимок экрана 2023-12-15 в 15 43 36](https://github.com/flowykk/ABC/assets/71427624/9aa5c367-ff7a-4ad9-bb54-f2b529e0927d)
 
 
 
