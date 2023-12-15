@@ -347,7 +347,6 @@ Process finished with exit code 0
 <img width="685" alt="Снимок экрана 2023-12-15 в 15 53 53" src="https://github.com/flowykk/ABC/assets/71427624/241afa6f-cdef-49cc-935a-cee90668c3de">
 
 #### Результат выполнения программы
-![Снимок экрана 2023-12-15 в 15 54 19 (2)](https://github.com/flowykk/ABC/assets/71427624/addc7419-4dcd-4c81-9f37-e055797b800c)
 <img width="1440" alt="Снимок экрана 2023-12-15 в 15 54 19" src="https://github.com/flowykk/ABC/assets/71427624/202e5450-42cc-4ba0-a4a8-71876d7fef67">
 
 #### Содержимое выходного файла
@@ -356,7 +355,6 @@ Process finished with exit code 0
 #### Пример 3
 ### Передача аргументов вручную; Количество студентов - 4; Выходной файл - "output.txt"
 #### Результат выполнения программы
-![Снимок экрана 2023-12-15 в 15 55 59 (2)](https://github.com/flowykk/ABC/assets/71427624/4581a6fa-1f83-4480-baa8-fff418979635)
 <img width="1440" alt="Снимок экрана 2023-12-15 в 15 55 59" src="https://github.com/flowykk/ABC/assets/71427624/25d30a32-2ef5-496b-a1f5-3b67286545da">
 
 #### Содержимое выходного файла
@@ -365,7 +363,6 @@ Process finished with exit code 0
 #### Пример 4
 ### Передача аргументов вручную; Количество студентов - 6; Выходной файл - "testoutput.txt"
 #### Результат выполнения программы
-![Снимок экрана 2023-12-15 в 15 59 08 (2)](https://github.com/flowykk/ABC/assets/71427624/6c52d83a-7233-4606-9a78-bcd11e2e2c2b)
 <img width="1440" alt="Снимок экрана 2023-12-15 в 15 59 08" src="https://github.com/flowykk/ABC/assets/71427624/00161c13-f9ff-4ee9-927d-64a6f52c6c30">
 
 #### Содержимое выходного файла
