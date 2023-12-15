@@ -32,12 +32,12 @@ void* generatorThread(void* arg);
 
 int main() {
     // Инициализация мьютекса и условной переменной
-    pthread_mutex_init(&bufferMutex, NULL);
-    pthread_cond_init(&bufferCond, NULL);
+    pthread_mutex_init(&bufferMutex, nullptr);
+    pthread_cond_init(&bufferCond, nullptr);
 
     // Создание потока отслеживания буфера
     pthread_t observer;
-    pthread_create(&observer, NULL, observeThread, NULL);
+    pthread_create(&observer, nullptr, observeThread, nullptr);
 
     // Создание потоков генераторов
     for (int i = 1; i <= THREADS_NUMBER; ++i) {
@@ -46,18 +46,18 @@ int main() {
         *number = i;
 
         // Запуск потока генератора
-        pthread_create(&thread, NULL, generatorThread, number);
+        pthread_create(&thread, nullptr, generatorThread, number);
     }
 
     // Ожидание завершения потока отслеживания буфера
-    pthread_join(observer, NULL);
+    pthread_join(observer, nullptr);
 
     // Уничтожение мьютекса и условной переменной
     pthread_mutex_destroy(&bufferMutex);
     pthread_cond_destroy(&bufferCond);
 
     // Вывод окончательного результата
-    printf("Final result: %d", result);
+    std::cout << "Result: " <<  result << std::endl;
 
     return 0;
 }
@@ -82,7 +82,7 @@ void* sumThread(void* args) {
     pthread_cond_signal(&bufferCond);
     pthread_mutex_unlock(&bufferMutex);
 
-    return NULL;
+    return nullptr;
 }
 
 // Функция для генерации случайного числа с задержкой
@@ -104,7 +104,7 @@ void* generatorThread(void* arg) {
     pthread_cond_signal(&bufferCond);
     pthread_mutex_unlock(&bufferMutex);
 
-    return NULL;
+    return nullptr;
 }
 
 // Функция для отслеживания буфера и запуска сумматоров
@@ -131,14 +131,14 @@ void* observeThread(void* arg) {
 
             // Запускаем поток сумматора
             pthread_t adder;
-            pthread_create(&adder, NULL, sumThread, numbers);
+            pthread_create(&adder, nullptr, sumThread, numbers);
         } else if (generators == 0 && summators == 0) {
             // Завершаем работу, если генераторы и сумматоры завершились
             result = buffer[0];
 
             // Разблокируем мьютекс и завершаем поток
             pthread_mutex_unlock(&bufferMutex);
-            return NULL;
+            return nullptr;
         } else {
             // Если нет двух чисел в буфере и не все генераторы/сумматоры завершились,
             // разблокируем мьютекс и продолжаем ожидание
