@@ -227,38 +227,38 @@ void *TeacherThread(void *arg) {
 
 ### Попытка чтения данных из неизвестного файла
 #### Результат из терминала
-<img width="741" alt="Снимок экрана 2023-12-15 в 14 55 33" src="https://github.com/flowykk/ABC/assets/71427624/68202a9d-7c6a-4050-aefc-de685dbd320a">
+<img width="750" alt="Снимок экрана 2023-12-15 в 14 55 33" src="https://github.com/flowykk/ABC/assets/71427624/68202a9d-7c6a-4050-aefc-de685dbd320a">
 
 ### Передача аргументов вручную; Количество студентов - 3; Выходной файл - "output.txt"
 #### Результат из терминала
-<img width="741" alt="Снимок экрана 2023-12-15 в 14 56 45" src="https://github.com/flowykk/ABC/assets/71427624/19c7c93d-50df-45bc-a0c1-baa88f212580">
+<img width="750" alt="Снимок экрана 2023-12-15 в 14 56 45" src="https://github.com/flowykk/ABC/assets/71427624/19c7c93d-50df-45bc-a0c1-baa88f212580">
 
 #### Содержимое выходного файла
-<img width="684" alt="Снимок экрана 2023-12-15 в 14 57 39" src="https://github.com/flowykk/ABC/assets/71427624/2e327e7d-36e9-4160-a159-7512cdf8e952">
+<img width="750" alt="Снимок экрана 2023-12-15 в 14 57 39" src="https://github.com/flowykk/ABC/assets/71427624/2e327e7d-36e9-4160-a159-7512cdf8e952">
 
 ### Передача аргументов вручную; Количество студентов - 5; Выходной файл - "output.txt"
 #### Результат из терминала
-<img width="746" alt="Снимок экрана 2023-12-15 в 14 59 46" src="https://github.com/flowykk/ABC/assets/71427624/8d24a5d4-4451-47fd-ad1f-feb6345ae144">
+<img width="750" alt="Снимок экрана 2023-12-15 в 14 59 46" src="https://github.com/flowykk/ABC/assets/71427624/8d24a5d4-4451-47fd-ad1f-feb6345ae144">
 
 #### Содержимое выходного файла
-<img width="683" alt="Снимок экрана 2023-12-15 в 15 00 13" src="https://github.com/flowykk/ABC/assets/71427624/71e70698-fca8-44e4-bf92-48ceccccd5c5">
+<img width="750" alt="Снимок экрана 2023-12-15 в 15 00 13" src="https://github.com/flowykk/ABC/assets/71427624/71e70698-fca8-44e4-bf92-48ceccccd5c5">
 
 ### Передача аргументов вручную; Количество студентов - 10; Выходной файл - "output10.txt"
 #### Результат из терминала
-<img width="745" alt="Снимок экрана 2023-12-15 в 15 01 43" src="https://github.com/flowykk/ABC/assets/71427624/64e2d8fe-a2b0-45e4-9320-e575bfc8b256">
+<img width="750" alt="Снимок экрана 2023-12-15 в 15 01 43" src="https://github.com/flowykk/ABC/assets/71427624/64e2d8fe-a2b0-45e4-9320-e575bfc8b256">
 
 #### Содержимое выходного файла
-<img width="683" alt="Снимок экрана 2023-12-15 в 15 02 01" src="https://github.com/flowykk/ABC/assets/71427624/ae3cdaa1-6655-4ada-bcda-6adcaa0f6bf6">
+<img width="750" alt="Снимок экрана 2023-12-15 в 15 02 01" src="https://github.com/flowykk/ABC/assets/71427624/ae3cdaa1-6655-4ada-bcda-6adcaa0f6bf6">
 
 ### Передача аргументов вручную; Количество студентов - 7
 #### Результат из терминала
-<img width="748" alt="Снимок экрана 2023-12-15 в 15 04 25" src="https://github.com/flowykk/ABC/assets/71427624/92319a6e-b93e-475a-add3-ac65b08935da">
+<img width="750" alt="Снимок экрана 2023-12-15 в 15 04 25" src="https://github.com/flowykk/ABC/assets/71427624/92319a6e-b93e-475a-add3-ac65b08935da">
 
 В случае отсутствия выходного файла среди аргументов, результат никуда не записывается.
 
 ### Передача аргументов вручную; Количество студентов - 4
 #### Результат из терминала
-<img width="747" alt="Снимок экрана 2023-12-15 в 15 06 46" src="https://github.com/flowykk/ABC/assets/71427624/bcc24db4-d568-4ed5-9e03-fb6154d1e8f4">
+<img width="750" alt="Снимок экрана 2023-12-15 в 15 06 46" src="https://github.com/flowykk/ABC/assets/71427624/bcc24db4-d568-4ed5-9e03-fb6154d1e8f4">
 
 
 
