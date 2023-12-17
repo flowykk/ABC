@@ -59,4 +59,5 @@ Result: 247
 ## Скриншоты с демонстрацией работы программы
 <img width="1440" alt="Снимок экрана 2023-12-15 в 14 05 38" src="https://github.com/flowykk/ABC/assets/71427624/6e12839c-0389-4813-8460-19713957a572">
 
+![Снимок экрана 2023-12-15 в 14 06 29 (2)](https://github.com/flowykk/ABC/assets/71427624/9934ef0e-d092-4309-9815-ca6fb14ffb63)
 <img width="1440" alt="Снимок экрана 2023-12-15 в 14 06 29" src="https://github.com/flowykk/ABC/assets/71427624/0aaba2e9-cb52-4930-9845-aa28b048a4ea">
