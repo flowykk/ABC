@@ -64,7 +64,8 @@ int main() {
 
 // Функция для суммирования чисел с задержкой
 void* sumThread(void* args) {
-    sleep(rand() % 3 + 3);
+    int delay = rand() % 3 + 3;
+    sleep(delay);
 
     pthread_mutex_lock(&bufferMutex);
 
@@ -87,7 +88,8 @@ void* sumThread(void* args) {
 
 // Функция для генерации случайного числа с задержкой
 void* generatorThread(void* arg) {
-    sleep(rand() % 7 + 1);
+    int delay = rand() % 7 + 1;
+    sleep(delay);
 
     pthread_mutex_lock(&bufferMutex);
 
